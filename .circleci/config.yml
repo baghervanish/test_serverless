@@ -22,9 +22,8 @@ jobs:
             
       - run:
           name: install credentianls
-          command: |          
+          command: 
             ./.circleci/install-credentails.sh
-
 
       - run:
           name: deploy code
