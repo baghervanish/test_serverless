@@ -27,7 +27,10 @@ jobs:
 
       - run:
           name: deploy code
-          command: sls deploy
+          
+          command:
+            sls deploy
+            remove-item alias:sls
       
       - save_cache:
           paths:
