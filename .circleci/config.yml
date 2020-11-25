@@ -23,7 +23,6 @@ jobs:
       - run:
           name: install credentianls
           command: |          
-            remove-Item alias:sls
             ./.circleci/install-credentails.sh
 
 
