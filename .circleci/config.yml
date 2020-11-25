@@ -21,7 +21,7 @@ jobs:
       - run:
           name: Install Serverless
           command: |
-            npm i -g serverless@2.11.1
+            npm i serverless@2.11.1
 
       - run:
           name: Install Serverless s3
