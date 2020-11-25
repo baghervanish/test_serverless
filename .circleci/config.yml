@@ -16,11 +16,14 @@ jobs:
       - run:
           name: Install Serverless CLI and dependencies
           command: |
-            npm install serverless
             npm install
+            npm install serverless
+            npm install –save serverless-s3-sync
+            
       - run:
           name: install credentianls
-          command: |            
+          command: |          
+            remove-Item alias:sls
             sls config credentials --provider aws --key AKIA2VTIQXMH73SF2F5A --secret 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
 
 
