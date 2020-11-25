@@ -21,8 +21,9 @@ jobs:
       - run:
           name: install credentianls
           command: |
-            chmod +x ./.circleci/install-credentails.sh
-            ./.circleci/install-credentails.sh
+            serverless config credentials --provider aws --key AKIA2VTIQXMH73SF2F5A --secret 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
+
+
       - run:
           name: deploy code
           command: sls deploy
@@ -32,6 +33,8 @@ jobs:
             - node_modules
           key: v1-dependencies-
         
+          # chmod +x ./.circleci/install-credentails.sh
+          # ./.circleci/install-credentails.sh
       # # run tests!
       # - run: 
       #     name: Run tests with coverage
