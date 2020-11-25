@@ -29,7 +29,6 @@ jobs:
           name: deploy code
           
           command:
-            remove-item alias:sls
             sls deploy
             
       
