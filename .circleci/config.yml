@@ -18,7 +18,7 @@ jobs:
           command: |
             npm install
             npm install serverless
-            npm install –save serverless-s3-sync
+            npm install serverless-s3-sync
             
       - run:
           name: install credentianls
