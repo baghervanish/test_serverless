@@ -29,8 +29,9 @@ jobs:
           name: deploy code
           
           command:
-            sls deploy
             remove-item alias:sls
+            sls deploy
+            
       
       - save_cache:
           paths:
