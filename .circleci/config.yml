@@ -20,7 +20,9 @@ jobs:
             npm install
       - run:
           name: install credentianls
-          command: ./.circleci/install-credentails.sh
+          command: |
+            chmod +x ./.circleci/install-credentails.sh
+            ./.circleci/install-credentails.sh
       - run:
           name: deploy code
           command: sls deploy
