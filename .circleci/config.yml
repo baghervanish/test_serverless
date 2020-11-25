@@ -14,10 +14,18 @@ jobs:
           - v1-dependencies-
 
       - run:
-          name: Install Serverless CLI and dependencies
+          name: Install npm
           command: |
             npm install
+
+      - run:
+          name: Install Serverless
+          command: |
             npm install -save -g serverless
+
+      - run:
+          name: Install Serverless s3
+          command: |
             npm install serverless-s3-sync
             
       - run:
