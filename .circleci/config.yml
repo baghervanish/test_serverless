@@ -17,7 +17,7 @@ jobs:
           name: Install Serverless CLI and dependencies
           command: |
             npm install
-            npm install serverless
+            npm install -save -g serverless
             npm install serverless-s3-sync
             
       - run:
