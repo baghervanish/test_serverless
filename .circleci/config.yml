@@ -17,12 +17,12 @@ jobs:
           name: Install npm
           command: |
             npm install
-# npm i serverless@2.11.1
+
       - run:
           name: Install Serverless 
           command: |
             npm i serverless@1.57.0
-# npm install --save-dev serverless@1.57.0
+
 
       - run:
           name: Install Serverless s3
