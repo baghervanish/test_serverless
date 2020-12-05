@@ -18,15 +18,10 @@ jobs:
           command: |
             npm install
 
-      - store_test_results :
-          path: /tmp/test-results
-
-
       - run:
           name: Install Serverless 
           command: |
             npm i serverless@1.57.0
-
 
       - run:
           name: Install Serverless s3
