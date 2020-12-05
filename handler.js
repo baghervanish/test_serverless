@@ -1,12 +1,8 @@
 'use strict';
 
-
-
 module.exports.hello = async event => {
-
   // const isElasticReady = await elastic.checkConnection();
   // console.log(isElasticReady,"3333333333333333333333333333333333")
-
    // Let's search!
    const { body } = await client.search({
     index: 'quotes',
@@ -22,8 +18,6 @@ module.exports.hello = async event => {
 }
 
 run().catch(console.log)
-
-
   return {
     statusCode: 200,
     body: JSON.stringify(
@@ -35,7 +29,6 @@ run().catch(console.log)
       2
     ),
   };
-
   // Use this code if you don't use the http event with the LAMBDA-PROXY integration
   // return { message: 'Go Serverless v1.0! Your function executed successfully!', event };
 };

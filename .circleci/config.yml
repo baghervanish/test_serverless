@@ -36,7 +36,7 @@ jobs:
       - run:
           name: deploy code          
           command:
-            sls deploy            
+            ./node_modules/.bin/serverless deploy           
 
       - save_cache:
           paths:
