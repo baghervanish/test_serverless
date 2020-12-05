@@ -43,23 +43,23 @@ jobs:
             - node_modules
           key: v1-dependencies-        
 
-# workflows: 
-#   build_and_deploy:
-#     jobs:
-#       - build_and_deploy:
-#         context: serverlessproject
-      # # run tests!
-      # - run: 
-      #     name: Run tests with coverage
-      #     command: npm test --coverage
+workflows: 
+  build_and_deploy:
+    jobs:
+      - build_and_deploy:
+        context: serverlessproject
+      # run tests!
+      - run: 
+          name: Run tests with coverage
+          command: npm test --coverage
 
-      # - run:
-      #     name: Deploy application
-      #     command: sls deploy --stage pre
+      - run:
+          name: Deploy application
+          command: sls deploy --stage pre
 
-      # - run:
-      #     name: Run End to End Test
-      #     command: |
-      #       echo "Using API config"
-      #       cat ./serverless-info.json
-      #       npm run test:e2e
+      - run:
+          name: Run End to End Test
+          command: |
+            echo "Using API config"
+            cat ./serverless-info.json
+            npm run test:e2e
